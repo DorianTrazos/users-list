@@ -1,20 +1,16 @@
-import Button from './components/button/Button';
+import MainContainer from './components/main-container/MainContainer';
+import UsersList from './components/users-list/UsersList';
+import { USERS } from './constants/users';
 import { GlobalStyles } from './styles/GlobalStyles';
 
 const App = () => {
 	return (
-		<div>
+		<>
 			<GlobalStyles />
-			<Button color='red' fontSize='20px'>
-				Click Me Red!
-			</Button>
-			<Button color='blue' fontSize='30px'>
-				Click Me Blue!
-			</Button>
-			<Button color='green' fontSize='10px'>
-				Click Me Blue!
-			</Button>
-		</div>
+			<MainContainer>
+				<UsersList initialUsers={USERS} />
+			</MainContainer>
+		</>
 	);
 };
 
